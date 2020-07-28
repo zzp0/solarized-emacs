@@ -57,20 +57,14 @@
      `(minibuffer-prompt ((,class (:foreground ,base0))))
      `(mode-line
        ((,class (:inverse-video unspecified
-                                :overline ,s-mode-line-bg
-                                :underline ,s-mode-line-underline
                                 :foreground ,s-mode-line-fg
-                                :background ,s-mode-line-bg
-                                :box (:line-width 1 :color ,s-mode-line-bg
-                                                  :style unspecified)))))
+                                :background ,s-mode-line-bg))))
      `(mode-line-buffer-id ((,class (:foreground ,s-mode-line-buffer-id-fg :weight bold))))
      `(mode-line-inactive
        ((,class (:inverse-video unspecified
-                                :overline ,s-mode-line-inactive-bc
-                                :underline ,s-mode-line-underline
                                 :foreground ,s-mode-line-inactive-fg
                                 :background ,s-mode-line-inactive-bg
-                                :box (:line-width 1 :color ,s-mode-line-inactive-bg
+                                :box (:line-width -1 :color ,s-mode-line-inactive-fg
                                                   :style unspecified)))))
      `(region
        ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
@@ -84,6 +78,8 @@
      `(trailing-whitespace ((,class (:background ,red))))
      `(vertical-border ((,class (:foreground ,s-line))))
      `(warning ((,class (:foreground ,yellow ))))
+;;;;; calendar
+     `(calendar-today ((t (:box (:line-width -1)))))
 ;;;;; compilation
      `(compilation-column-face ((,class (:foreground ,cyan :underline nil))))
      `(compilation-column-number ((,class (:inherit font-lock-doc-face :foreground ,cyan
@@ -145,6 +141,13 @@
                                       :foreground ,base1
                                       :underline ,s-line
                                       :weight bold))))
+;;;;; dired-subtree
+     `(dired-subtree-depth-1-face ((,class :background ,green-1bg :foreground ,green-1fg)))
+     `(dired-subtree-depth-2-face ((,class :background ,yellow-1bg :foreground ,yellow-1fg)))
+     `(dired-subtree-depth-3-face ((,class :background ,green-1bg :foreground ,green-1fg)))
+     `(dired-subtree-depth-4-face ((,class :background ,yellow-1bg :foreground ,yellow-1fg)))
+     `(dired-subtree-depth-5-face ((,class :background ,green-1bg :foreground ,green-1fg)))
+     `(dired-subtree-depth-6-face ((,class :background ,yellow-1bg :foreground ,yellow-1fg)))
 ;;;;; display-fill-column-indicator
      `(fill-column-indicator ((,class :foreground ,base02 :weight semilight)))
 ;;;;; dropdown
@@ -456,7 +459,6 @@
      `(diff-hl-change ((,class (:background ,s-diff-C-bg :foreground ,s-diff-C-fg))))
      `(diff-hl-delete ((,class (:background ,s-diff-A-bg :foreground ,s-diff-A-fg))))
      `(diff-hl-insert ((,class (:background ,s-diff-B-bg :foreground ,s-diff-B-fg))))
-     `(diff-hl-reverted-hunk-highlight ((,class (:background ,s-diff-Ancestor-bg :foreground ,s-diff-Ancestor-fg))))
 ;;;;; ediff
      `(ediff-even-diff-A ((t (:background ,base02))))
      `(ediff-even-diff-Ancestor ((t (:background ,base02))))
@@ -794,7 +796,7 @@
      `(helm-ff-prefix ((,class (:background ,yellow :foreground ,base03))))
      `(helm-ff-symlink ((,class (:foreground ,cyan))))
      `(helm-grep-file ((,class (:foreground ,cyan :underline t))))
-     `(helm-grep-finish ((,class (:foreground ,green))))
+     `(helm-grep-finish ((,class (:inherit mode-line-buffer-id))))
      `(helm-grep-lineno ((,class (:foreground ,orange))))
      `(helm-grep-match ((,class (:inherit match))))
      `(helm-grep-running ((,class (:foreground ,red))))
@@ -1473,6 +1475,12 @@
        ((,class (,@(and (>= emacs-major-version 27) '(:extend t))
                  :inherit (outline-minor-0 outline-1)
                  :background ,(solarized-color-blend base03 yellow .9)))))
+;;;;; org-pomodoro
+     `(org-pomodoro-mode-line ((,class (:inherit mode-line-buffer-id))))
+     `(org-pomodoro-mode-line-overtime ((,class (:inherit mode-line-buffer-id :weight bold))))
+     `(org-pomodoro-mode-line-break ((,class (:inherit mode-line-buffer-id :slant italic))))
+;;;;; paradox
+     `(paradox-mode-line-face ((,class (:inherit mode-line-buffer-id :weight normal))))
 ;;;;; paren-face
      `(paren-face  ((,class (:foreground ,base01))))
 ;;;;; perspective
@@ -1573,19 +1581,19 @@
      `(skewer-repl-log-face ((,class (:foreground ,violet))))
 ;;;;; slime
      `(slime-repl-inputed-output-face ((,class (:foreground ,red))))
+;;;;; sly
+     `(sly-mode-line ((,class (:weight bold))))
 ;;;;; smart-mode-line
      ;; use (setq sml/theme nil) to enable Solarized for sml
-     `(sml/filename ((,class (:foreground ,base1 :weight bold))))
-     `(sml/prefix ((,class (:foreground unspecified))))
-     `(sml/git ((,class (:foreground unspecified))))
-     `(sml/process ((,class (:weight bold))))
-     `(sml/sudo ((,class  (:foreground ,orange :weight bold))))
-     `(sml/read-only ((,class (:foreground ,cyan))))
-     `(sml/outside-modified ((,class (:foreground , cyan))))
-     `(sml/modified ((,class (:foreground ,cyan))))
-     `(sml/vc-edited ((,class (:foreground ,green))))
-     `(sml/charging ((,class (:foreground ,base1))))
-     `(sml/discharging ((,class (:foreground ,base1 :weight bold))))
+     `(sml/global ((,class (:foreground ,s-mode-line-buffer-id-fg))))
+     `(sml/modes ((,class (:inherit sml/global :weight bold))))
+     `(sml/read-only ((,class (:foreground ,magenta-lc :weight bold))))
+     `(sml/modified ((,class (:foreground ,magenta-lc :weight bold))))
+     `(sml/outside-modified ((,class (:inherit sml/global :background ,red-lc :weight bold))))
+     `(sml/git ((,class (:inherit sml/global))))
+     `(sml/vc-edited ((,class (:foreground ,orange-lc :weight bold))))
+     `(sml/charging ((,class (:inherit sml/global :weight bold))))
+     `(sml/discharging ((,class (:inherit sml/global :weight bold :slant italic))))
 ;;;;; solaire
      `(solaire-default-face ((,class (:inherit default :background ,(solarized-color-blend base02 base03 0.5)))))
      `(solaire-minibuffer-face ((,class (:inherit default :background ,(solarized-color-blend base02 base03 0.5)))))
@@ -1762,7 +1770,7 @@
      ;; NOTE: This setting has no effect on the os widgets for me
      ;; zencoding uses this or setting x-gtk-use-system-tooltips nil
      `(tooltip ((,class (:background ,yellow-1bg :foreground ,yellow-1fg
-                                       :inherit ,s-variable-pitch))))
+                                     :inherit ,s-variable-pitch))))
 ;;;;; transient
      `(transient-heading             ((t (:foreground ,yellow  :weight bold))))
      `(transient-key                 ((t (:foreground ,base1   :weight bold))))
