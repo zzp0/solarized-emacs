@@ -123,7 +123,7 @@
 ;;;;; dired
      `(dired-directory ((,class (:foreground ,blue :weight normal))))
      `(dired-flagged ((,class (:foreground ,red))))
-     `(dired-header ((,class (:foreground ,base03 :background ,blue))))
+     `(dired-header ((,class (:inherit font-lock-type-face :inverse-video t))))
      `(dired-ignored ((,class (:inherit shadow))))
      `(dired-mark ((,class (:foreground ,yellow :weight bold))))
      `(dired-marked ((,class (:foreground ,magenta :weight bold))))
