@@ -810,7 +810,7 @@
      `(helm-match ((,class (:inherit match))))
      `(helm-selection ((,class (:background ,base02 :underline t))))
      `(helm-selection-line ((,class (:background ,base02 :foreground ,base1
-                                                 :underline nil))))
+                                                 :underline t))))
      `(helm-separator ((,class (:foreground ,red))))
      `(helm-source-header ((,class (:background ,blue-lc :foreground ,base03
                                                 :underline nil))))
