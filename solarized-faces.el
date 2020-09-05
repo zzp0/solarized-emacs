@@ -1739,6 +1739,16 @@
 ;;;;;; misc
      `(sr-clex-hotchar-face ((,class (:background ,red  :foreground ,base03
                                                   :weight bold))))
+;;;;; tab-bar & tab-line (since Emacs 27)
+     `(tab-bar ((,class (:inherit ,s-variable-pitch :foreground ,base1 :background ,base02))))
+     `(tab-bar-tab ((,class (:inherit tab-bar :underline ,red :weight bold))))
+     `(tab-bar-tab-inactive ((,class (:inherit tab-bar-tab :underline ,base0 :weight normal :slant italic))))
+
+     `(tab-line ((,class (:inherit ,s-variable-pitch :foreground ,s-header-line-fg :background ,s-header-line-bg :height 0.9))))
+     `(tab-line-tab ((,class (:inherit tab-line :weight bold))))
+     `(tab-line-tab-inactive ((,class (:inherit tab-line-tab :underline ,base0 :weight normal :slant italic))))
+     `(tab-line-tab-current ((,class (:inherit tab-line-tab :underline ,yellow))))
+     `(tab-line-close-highlight ((,class (:foreground ,red))))
 ;;;;; tabbar
      `(tabbar-default ((,class (:foreground ,base03 :background ,base03))))
      `(tabbar-highlight ((,class (:underline t))))
