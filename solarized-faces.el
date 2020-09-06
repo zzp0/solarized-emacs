@@ -79,7 +79,7 @@
      `(vertical-border ((,class (:foreground ,s-line))))
      `(warning ((,class (:foreground ,yellow ))))
 ;;;;; calendar
-     `(calendar-today ((t (:box (:line-width -1)))))
+     `(calendar-today ((t (:weight bold :underline ,red))))
 ;;;;; compilation
      `(compilation-column-face ((,class (:foreground ,cyan :underline nil))))
      `(compilation-column-number ((,class (:inherit font-lock-doc-face :foreground ,cyan
