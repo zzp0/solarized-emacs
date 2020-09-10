@@ -2000,6 +2000,8 @@
 ;;; Theme Variables
     (custom-theme-set-variables
      theme-name
+;;;;; mini-modeline
+     `(mini-modeline-face-attr '(:background ,s-mode-line-inactive-bg))
 ;;;;; ansi-colors
      `(ansi-color-names-vector
        [,base02 ,red ,green ,yellow ,blue ,magenta ,cyan ,base00])
