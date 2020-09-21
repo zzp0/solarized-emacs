@@ -610,6 +610,13 @@
                                   blue-hc base01)
                              :background ,(if solarized-emphasize-indicators
                                               blue-lc base03) :weight bold))))
+;;;;; flycheck-indicator
+     `(flycheck-indicator-disabled ((,class (:inherit mode-line-buffer-id :weight normal))))
+     `(flycheck-indicator-running ((,class (:inherit mode-line-buffer-id :weight normal))))
+     `(flycheck-indicator-success ((,class (:inherit mode-line-buffer-id :weight normal))))
+     `(flycheck-indicator-error ((,class (:inherit mode-line-buffer-id :weight normal))))
+     `(flycheck-indicator-warning ((,class (:inherit mode-line-buffer-id :weight normal))))
+     `(flycheck-indicator-info ((,class (:inherit mode-line-buffer-id :weight normal))))
 ;;;;; flymake
      `(flymake-errline
        ((,(append '((supports :underline (:style wave))) class)
