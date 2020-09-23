@@ -1397,6 +1397,7 @@
      `(org-ellipsis ((,class (:foreground ,base01))))
      `(org-formula ((,class (:foreground ,yellow))))
      `(org-headline-done ((,class (:foreground ,green))))
+     `(org-headline-todo ((,class (:foreground ,magenta))))
      `(org-hide ((,class (:foreground ,base03))))
      `(org-level-1 ((,class (:inherit ,s-variable-pitch :foreground ,orange
                                       ,@(when solarized-scale-org-headlines
