@@ -1393,11 +1393,11 @@
                                           :box (:line-width 1 :style released-button)))))
      `(org-code ((,class (:foreground ,base01))))
      `(org-date ((,class (:foreground ,blue :underline t))))
-     `(org-done ((,class (:weight bold :foreground ,green))))
+     `(org-done ((,class (:inherit shadow :weight bold))))
      `(org-ellipsis ((,class (:foreground ,base01))))
      `(org-formula ((,class (:foreground ,yellow))))
-     `(org-headline-done ((,class (:foreground ,green))))
-     `(org-headline-todo ((,class (:foreground ,magenta))))
+     `(org-headline-done ((,class (:inherit shadow))))
+     `(org-headline-todo ((,class (:foreground ,cyan))))
      `(org-hide ((,class (:foreground ,base03))))
      `(org-level-1 ((,class (:inherit ,s-variable-pitch :foreground ,orange
                                       ,@(when solarized-scale-org-headlines
@@ -1428,7 +1428,7 @@
      `(org-scheduled-today ((,class (:foreground ,blue :weight normal))))
      `(org-special-keyword ((,class (:foreground ,base01 :weight bold))))
      `(org-table ((,class (:foreground ,green))))
-     `(org-tag ((,class (:weight bold))))
+     `(org-tag ((,class (:inherit shadow :weight bold))))
      `(org-time-grid ((,class (:foreground ,base01))))
      `(org-todo ((,class (:foreground ,cyan :weight bold))))
      `(org-upcoming-deadline ((,class (:foreground ,yellow  :weight normal :underline nil))))
