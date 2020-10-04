@@ -2012,6 +2012,8 @@
 ;;; Theme Variables
     (custom-theme-set-variables
      theme-name
+;;;;; exwm
+     `(exwm-floating-border-color ,cyan)
 ;;;;; mini-modeline
      `(mini-modeline-face-attr '(:background ,s-mode-line-inactive-bg))
 ;;;;; ansi-colors
