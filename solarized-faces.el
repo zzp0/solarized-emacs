@@ -54,7 +54,7 @@
      `(link-visited ((,class (:foreground ,yellow :underline t :weight normal))))
      `(match ((,class (:background ,base02 :foreground ,base1 :weight bold))))
      `(menu ((,class (:foreground ,base0 :background ,base03))))
-     `(minibuffer-prompt ((,class (:foreground ,base0))))
+     `(minibuffer-prompt ((,class (:foreground ,base0 :weight bold))))
      `(mode-line
        ((,class (:inverse-video unspecified
                                 :foreground ,s-mode-line-fg
