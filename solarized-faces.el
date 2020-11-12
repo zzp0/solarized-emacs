@@ -1754,7 +1754,7 @@
 
      `(tab-line ((,class (:inherit ,s-variable-pitch :foreground ,s-header-line-fg :background ,s-header-line-bg :height 0.9))))
      `(tab-line-tab ((,class (:inherit tab-line :weight bold))))
-     `(tab-line-tab-inactive ((,class (:inherit tab-line-tab :underline ,base0 :weight normal :slant italic))))
+     `(tab-line-tab-inactive ((,class (:inherit tab-line-tab :underline ,base0 :weight normal))))
      `(tab-line-tab-current ((,class (:inherit tab-line-tab :underline ,yellow))))
      `(tab-line-close-highlight ((,class (:foreground ,red))))
 ;;;;; tabbar
