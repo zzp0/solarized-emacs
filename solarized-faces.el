@@ -383,6 +383,8 @@
                                                  :inverse-video unspecified))))
 ;;;;; col-highlight
      `(col-highlight ((,class (:background ,base02))))
+;;;;; company-box
+     `(company-box-scrollbar ((,class (:background ,base01))))
 ;;;;; company-mode
      `(company-echo ((,class nil)))
      `(company-echo-common ((,class (:background ,red))))
@@ -1784,6 +1786,10 @@
      `(term-color-magenta ((t (:foreground ,magenta :background ,magenta))))
      `(term-color-cyan ((t (:foreground ,cyan :background ,cyan))))
      `(term-color-white ((t (:foreground ,base2 :background ,base2))))
+;;;;; terraform-mode
+     `(terraform--resource-name-face ((,class (:foreground ,green))))
+     `(terraform--resource-type-face ((,class (:foreground ,yellow))))
+
 ;;;;; todotxt
      `(todotxt-priority-a-face ((,class (:foreground ,orange))))
      `(todotxt-priority-b-face ((,class (:foreground ,yellow))))
