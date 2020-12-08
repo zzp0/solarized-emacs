@@ -1487,6 +1487,10 @@
      `(org-pomodoro-mode-line ((,class (:inherit mode-line-buffer-id))))
      `(org-pomodoro-mode-line-overtime ((,class (:inherit mode-line-buffer-id :weight bold))))
      `(org-pomodoro-mode-line-break ((,class (:inherit mode-line-buffer-id :slant italic))))
+;;;;; pomidor
+     `(pomidor-time-face ((,class (:height 3.0))))
+     `(pomidor-date-face ((,class (:height 3.0))))
+     `(pomidor-timer-face ((,class (:height 3.0))))
 ;;;;; paradox
      `(paradox-mode-line-face ((,class (:inherit mode-line-buffer-id :weight normal))))
 ;;;;; paren-face
