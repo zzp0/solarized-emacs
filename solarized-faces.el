@@ -78,6 +78,7 @@
      `(trailing-whitespace ((,class (:background ,red))))
      `(vertical-border ((,class (:foreground ,s-line))))
      `(warning ((,class (:foreground ,yellow ))))
+     `(next-error ((,class (:foreground ,magenta-2fg :background ,magenta-2bg :weight normal))))
 ;;;;; calendar
      `(calendar-today ((t (:weight bold :underline ,red))))
 ;;;;; compilation
@@ -201,6 +202,11 @@
      `(Man-overstrike ((,class (:foreground ,blue :weight bold))))
      `(Man-reverse ((,class (:foreground ,orange))))
      `(Man-underline ((,class (:foreground ,green :underline t))))
+
+;;;;; pulse
+     `(pulse-highlight-start-face ((,light-class
+                                    (:background ,(solarized-color-blend yellow base03 0.4)))
+                                   (,dark-class (:background ,(solarized-color-blend cyan base03 0.4)))))
 ;;;;; wid-edit
      `(widget-field ((,class (:background ,base02))))
 ;;;;; font lock
@@ -1577,8 +1583,8 @@
      `(rst-level-6 ((,class (:inherit org-level-6))))
 ;;;;; selectrum-mode
      `(selectrum-current-candidate ((,class (:weight bold :background ,base02 :underline t))))
-     `(selectrum-primary-highlight ((,class (:foreground ,base1))))
-     `(selectrum-secondary-highlight ((,class (:foreground ,yellow))))
+     `(selectrum-primary-highlight ((,class (:foreground ,yellow))))
+     `(selectrum-secondary-highlight ((,class (:foreground ,blue))))
 ;;;;; sh-mode
      `(sh-quoted-exec ((,class (:foreground ,violet :weight bold))))
      `(sh-escaped-newline ((,class (:foreground ,yellow :weight bold))))
