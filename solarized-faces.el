@@ -80,7 +80,8 @@
      `(warning ((,class (:foreground ,yellow ))))
      `(next-error ((,class (:foreground ,magenta-2fg :background ,magenta-2bg :weight normal))))
 ;;;;; calendar
-     `(calendar-today ((t (:weight bold :underline ,red))))
+     `(calendar-today ((,class (:weight bold :underline ,red))))
+     `(holiday ((,class (:slant italic :underline (:color ,orange :style wave)))))
 ;;;;; compilation
      `(compilation-column-face ((,class (:foreground ,cyan :underline nil))))
      `(compilation-column-number ((,class (:inherit font-lock-doc-face :foreground ,cyan
