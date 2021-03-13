@@ -82,6 +82,9 @@
 ;;;;; calendar
      `(calendar-today ((,class (:weight bold :underline ,red))))
      `(holiday ((,class (:slant italic :underline (:color ,orange :style wave)))))
+;;;;; cal-china-x
+     `(cal-china-x-general-holiday-face ((,class (:inherit holiday))))
+     `(cal-china-x-important-holiday-face ((,class (:inherit holiday :underline (:color ,magenta :style wave)))))
 ;;;;; compilation
      `(compilation-column-face ((,class (:foreground ,cyan :underline nil))))
      `(compilation-column-number ((,class (:inherit font-lock-doc-face :foreground ,cyan
